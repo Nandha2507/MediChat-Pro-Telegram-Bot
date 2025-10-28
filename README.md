@@ -171,7 +171,5 @@ H --> I[💬 Contextual Answer returned to Telegram]
 ---
 
 ## 👨‍💻 Author
-
 **Nandha Kishore**  
-AI & Data Engineering | Intelligent Automation | RAG Systems  
-📫 [LinkedIn](https://linkedin.com/in/)
+📫 [LinkedIn](https://www.linkedin.com/in/nandha-kishore-b35ba61a0/)
