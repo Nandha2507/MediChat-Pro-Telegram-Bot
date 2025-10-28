@@ -146,7 +146,6 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 
 ## 🧭 System Architecture Flow
 
-```mermaid
 flowchart TD
 
 A[📱 User uploads PDFs via Telegram] --> B[🤖 Telegram Bot receives file]
