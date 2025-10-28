@@ -1,9 +1,9 @@
-🧠 MediChat Pro – Telegram Bot
+**🧠 MediChat Pro – Telegram Bot**
 
 An intelligent AI-powered Telegram bot that allows users to upload and chat with their medical PDF documents.
 MediChat Pro automatically extracts, indexes, and analyzes uploaded medical records — enabling contextual question answering using Retrieval-Augmented Generation (RAG).
 
-⚙️ Features
+**⚙️ Features**
 
 📄 Upload and process one or more medical PDFs
 
@@ -15,7 +15,7 @@ MediChat Pro automatically extracts, indexes, and analyzes uploaded medical reco
 
 💡 Built with LangChain, Sentence Transformers, and Telegram Bot API
 
-🧩 Tech Stack
+**🧩 Tech Stack**
 
 Python 3.9+
 
@@ -31,7 +31,7 @@ pdfminer.six – PDF text extraction
 
 python-telegram-bot – Telegram bot integration
 
-🏗️ Environment Setup
+**🏗️ Environment Setup**
 1. Clone the repository
 git clone https://github.com/yourusername/MediChat-Pro-Telegram-Bot.git
 cd MediChat-Pro-Telegram-Bot
@@ -49,7 +49,7 @@ source avivo_task_telegram_bot/bin/activate
 pip install -r requirements.txt
 
 
-If you don’t yet have requirements.txt, create one with this content 👇
+**If you don’t yet have requirements.txt, create one with this content 👇**
 
 📦 requirements.txt
 python-telegram-bot==20.7
@@ -73,9 +73,9 @@ TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
 EURI_API_KEY=your_euri_api_key_here
 
 
-💡 Get your Telegram Bot Token from @BotFather
+**💡 Get your Telegram Bot Token from @BotFather
 
-💡 Get your Euri API key from https://euri.ai
+💡 Get your Euri API key from https://euri.ai**
 
 5. Project Structure
 MediChat-Pro-Telegram-Bot/
@@ -87,7 +87,7 @@ MediChat-Pro-Telegram-Bot/
 ├── .env                       # API keys
 └── data/                      # (Optional) local FAISS index folder
 
-🚀 Running the Bot
+**🚀 Running the Bot**
 
 Once setup is complete, simply run:
 
@@ -101,7 +101,7 @@ You should see:
 
 Then open Telegram → search for your bot → upload a PDF file → watch it automatically process → and start chatting!
 
-🩺 Example Flow
+**🩺 Example Flow**
 
 Upload a medical PDF
 
@@ -117,7 +117,7 @@ Ask: “What are the diagnoses mentioned?”
 
 Bot responds contextually from your uploaded reports.
 
-🧠 How It Works
+**🧠 How It Works**
 
 PDF Extraction: Uses pdfminer to extract text from medical PDFs.
 
@@ -128,15 +128,16 @@ Embedding: Converts text chunks into embeddings using SentenceTransformers.
 Vector Store: Stores embeddings in a FAISS index for fast retrieval.
 
 Question Answering: Retrieves top-matching chunks, builds a prompt, and queries the Euri AI model.
-
-📚 Future Enhancements
+**
+📚 Future Enhancements**
 
 Add support for image-based PDFs (OCR integration).
 
 Enable conversation memory across multiple queries.
 
 Extend support to non-medical documents (general RAG bot).
-
+**
 🧑‍💻 Author
 
 Nandha Kishore
+**
