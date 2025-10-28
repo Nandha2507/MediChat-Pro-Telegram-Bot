@@ -137,8 +137,6 @@ Enable conversation memory across multiple queries.
 
 Extend support to non-medical documents (general RAG bot).
 
-Deployement on Cloud Platform.
-
 🧑‍💻 Author
 
 Nandha Kishore
