@@ -145,7 +145,6 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 ---
 
 ## 🏗️ System Architecture
-
 ```mermaid
 flowchart TD
     A[📤 User Uploads PDFs via Telegram] --> B[🤖 Telegram Bot Backend]
