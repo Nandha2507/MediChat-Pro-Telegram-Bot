@@ -160,17 +160,24 @@ flowchart TD
     I --> J[📲 Telegram Chat Reply to User]
 ```
 
-##🔮 Future Enhancements
+## 🔮 Future Enhancements
 
-🖼️ OCR integration for image-based PDFs
+Planned upgrades and upcoming features for **MediChat Pro** include:
 
-🧠 Support for multiple document formats (Word, Excel, etc.)
+- 🖼️ **OCR Integration:** Enable text extraction from image-based PDFs using Tesseract.  
+- 🧠 **Multi-format Support:** Allow users to upload and process `.docx`, `.xlsx`, and `.txt` files in addition to PDFs.  
+- 📊 **Structured Data Insights:** Automatically extract and summarize key medical metrics and trends from reports.  
+- ☁️ **Cloud Vector Store:** Persist document embeddings securely for multi-session and multi-user access.  
+- 🗣️ **Voice-based Q&A:** Introduce voice interaction for asking questions through Telegram voice messages.  
+- 🤝 **Multi-user Context Management:** Support simultaneous sessions and maintain separate document contexts per user.  
+- 🔐 **Enhanced Privacy Mode:** Automatically delete processed files and vectors after session expiry.  
+- 📈 **Dashboard Extension (Web UI):** Develop a simple web interface to visualize summaries and extracted insights.  
+- 💬 **Message History Awareness:** Maintain the last 3 user interactions for improved contextual continuity.  
+- ⚡ **Caching:** Avoid re-embedding queries that have been processed before for faster responses.  
+- 📎 **Source Snippets:** Display which document or section contributed to each RAG-based answer.  
+- 🧾 **/summarize Command:** Summarize the last uploaded PDF or recent chat context directly within Telegram.
 
-📊 Addition of structured data insights extraction
 
-☁️ Cloud-based vector store for scalability
-
-🗣️ Voice-based Q&A interaction via Telegram
 
 ---
 
