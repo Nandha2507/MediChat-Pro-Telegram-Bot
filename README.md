@@ -147,6 +147,7 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 ## 🏗️ System Architecture
 
 ```mermaid
+
 flowchart TD
     A[📤 User Uploads PDFs via Telegram] --> B[🤖 Telegram Bot Backend]
     B --> C[📄 PDF Text Extraction using pdfminer.six]
@@ -157,7 +158,7 @@ flowchart TD
     G --> H[🧠 EURI AI Llama 3.1 8B Model]
     H --> I[💬 Contextual Response Generation]
     I --> J[📲 Telegram Chat Reply to User]
-
+```
 
 ##🔮 Future Enhancements
 
