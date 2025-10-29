@@ -20,8 +20,8 @@ MediChat Pro automatically extracts, indexes, and analyzes uploaded medical repo
 | Component | Library / Service |
 |------------|------------------|
 | **Bot Framework** | python-telegram-bot |
-| **LLM** | Euri AI |
-| **Embeddings** | Sentence Transformers |
+| **LLM** | llama-3.1-8b-instant (via Euri AI API) |
+| **Embeddings** | sentence-transformers/all-mpnet-base-v2 (Hugging Face) |
 | **Vector Store** | FAISS |
 | **Pipeline Orchestrator** | LangChain |
 | **PDF Parser** | pdfminer.six / PyMuPDF |
@@ -148,15 +148,15 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 
 ```mermaid
 flowchart TD
-    A[User Uploads PDF via Telegram] --> B[Bot Receives PDF File]
-    B --> C[Extract Text using pdfminer.six]
-    C --> D[Split Text into Chunks using RecursiveCharacterTextSplitter]
-    D --> E[Create FAISS Index using SentenceTransformer Embeddings]
-    E --> F[Store Index and Chat Model in User Session]
-    F --> G[User Sends Query via Telegram]
-    G --> H[Retrieve Relevant Chunks via Vector Similarity Search]
-    H --> I[Generate Context-Aware Answer using Euri Chat Model]
-    I --> J[Return Response Back to Telegram User]
+    A[User Uploads PDFs via Telegram] --> B[Telegram Bot Backend]
+    B --> C[PDF Text Extraction (pdfminer.six)]
+    C --> D[Text Chunking (RecursiveCharacterTextSplitter)]
+    D --> E[Vector Embedding (HuggingFace all-mpnet-base-v2)]
+    E --> F[FAISS Vector Store]
+    F --> G[Relevant Chunk Retrieval]
+    G --> H[EURI AI Llama-3.1-8B Model]
+    H --> I[Contextual Response Generation]
+    I --> J[Telegram Chat Reply]
 ```
 
 
