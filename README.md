@@ -144,7 +144,7 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 
 ---
 
-## 🧭 System Architecture Flow
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TD
@@ -157,7 +157,6 @@ flowchart TD
     G --> H[EURI AI Llama-3.1-8B Model]
     H --> I[Contextual Response Generation]
     I --> J[Telegram Chat Reply]
-```
 
 
 ---
