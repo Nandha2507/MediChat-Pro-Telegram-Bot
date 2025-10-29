@@ -148,16 +148,15 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 
 ```mermaid
 flowchart TD
-    A[User Uploads PDFs via Telegram] --> B[Telegram Bot Backend]
-    B --> C[PDF Text Extraction (pdfminer.six)]
-    C --> D[Text Chunking (RecursiveCharacterTextSplitter)]
-    D --> E[Vector Embedding (HuggingFace all-mpnet-base-v2)]
-    E --> F[FAISS Vector Store]
-    F --> G[Relevant Chunk Retrieval]
-    G --> H[EURI AI Llama-3.1-8B Model]
-    H --> I[Contextual Response Generation]
-    I --> J[Telegram Chat Reply]
-
+    A[📤 User Uploads PDFs via Telegram] --> B[🤖 Telegram Bot Backend]
+    B --> C[📄 PDF Text Extraction (pdfminer.six)]
+    C --> D[🧩 Text Chunking (RecursiveCharacterTextSplitter)]
+    D --> E[🔡 Vector Embedding (HuggingFace all-mpnet-base-v2)]
+    E --> F[📚 FAISS Vector Store]
+    F --> G[🔍 Relevant Chunk Retrieval]
+    G --> H[🧠 EURI AI Llama-3.1-8B Model]
+    H --> I[💬 Contextual Response Generation]
+    I --> J[📲 Telegram Chat Reply to User]
 
 ---
 
