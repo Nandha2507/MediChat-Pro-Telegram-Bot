@@ -149,9 +149,9 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 ```mermaid
 flowchart TD
     A[📤 User Uploads PDFs via Telegram] --> B[🤖 Telegram Bot Backend]
-    B --> C[📄 PDF Text Extraction using pdfminer six]
+    B --> C[📄 PDF Text Extraction using pdfminer.six]
     C --> D[🧩 Text Chunking using RecursiveCharacterTextSplitter]
-    D --> E[🔡 Vector Embedding with HuggingFace all mpnet base v2]
+    D --> E[🔡 Vector Embedding with HuggingFace all-mpnet-base-v2]
     E --> F[📚 FAISS Vector Store]
     F --> G[🔍 Relevant Chunk Retrieval]
     G --> H[🧠 EURI AI Llama 3.1 8B Model]
@@ -159,13 +159,17 @@ flowchart TD
     I --> J[📲 Telegram Chat Reply to User]
 
 
+##🔮 Future Enhancements
 
-## 🔮 Future Enhancements
+🖼️ OCR integration for image-based PDFs
 
-- 🧾 OCR integration for **image-based PDFs**
-- 💬 Persistent **conversation memory**
-- 🌐 Multi-domain document analysis (beyond medical)
-- 🧠 Offline FAISS cache persistence for faster re-use
+🧠 Support for multiple document formats (Word, Excel, etc.)
+
+📊 Addition of structured data insights extraction
+
+☁️ Cloud-based vector store for scalability
+
+🗣️ Voice-based Q&A interaction via Telegram
 
 ---
 
