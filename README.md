@@ -155,6 +155,7 @@ Command	Description
 ## 🏗️ System Architecture
 
 ```mermaid
+
 graph TD
     A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
     B --> C[PDF Text Extraction (pdfminer.six)]
