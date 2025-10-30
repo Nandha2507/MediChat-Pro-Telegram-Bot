@@ -7,11 +7,13 @@ MediChat Pro automatically extracts, indexes, and analyzes uploaded medical repo
 
 ## ⚙️ Features
 
-- 📂 Upload and process **one or more medical PDFs**
-- 💬 Ask **natural language questions** about your documents
-- ⚡ Uses **FAISS vector search** for context retrieval
-- 🤖 Powered by **Euri AI’s large language model**
-- 🔗 Built with **LangChain**, **Sentence Transformers**, and **python-telegram-bot**
+✅ Upload **multiple medical PDFs** (lab reports, prescriptions, summaries).  
+✅ Automatically **processes documents** into searchable vector embeddings.  
+✅ **Chat with your reports** — ask questions, and get context-aware medical insights.  
+✅ **Message history awareness** — remembers your last 3 interactions for continuity.  
+✅ **Source snippets** — clearly displays which PDF file the answer was derived from.  
+✅ **/summarize command** — quickly summarizes your recent chat or uploaded medical documents.  
+✅ Built using **LangChain**, **FAISS**, and **Llama 3.1 (8B)** for blazing-fast retrieval and intelligent responses.
 
 ---
 
@@ -144,40 +146,48 @@ Then open Telegram → search for your bot → upload your medical PDF(s) → an
 
 ---
 
+## 🧩 Commands Overview
+Command	Description
+/start	Initialize the bot and show welcome message.
+/process	Process all uploaded PDFs into embeddings.
+/summarize	Summarize the last 3 interactions or entire document content.
+
 ## 🏗️ System Architecture
 
 ```mermaid
 
-flowchart TD
-    A[📤 User Uploads PDFs via Telegram] --> B[🤖 Telegram Bot Backend]
-    B --> C[📄 PDF Text Extraction using pdfminer.six]
-    C --> D[🧩 Text Chunking using RecursiveCharacterTextSplitter]
-    D --> E[🔡 Vector Embedding with HuggingFace all-mpnet-base-v2]
-    E --> F[📚 FAISS Vector Store]
-    F --> G[🔍 Relevant Chunk Retrieval]
-    G --> H[🧠 EURI AI Llama 3.1 8B Model]
-    H --> I[💬 Contextual Response Generation]
-    I --> J[📲 Telegram Chat Reply to User]
+graph TD
+    A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
+    B --> C[PDF Text Extraction (pdfminer.six)]
+    C --> D[Text Chunking (LangChain Splitter)]
+    D --> E[Embeddings (HuggingFace - all-mpnet-base-v2)]
+    E --> F[FAISS Vector Store 🔍]
+    F --> G[Query Handling & Retrieval (LangChain RAG)]
+    G --> H[LLM (Llama-3.1-8b-instant via EURI API)]
+    H --> I[Answer Generation ✨]
+    I --> J[Telegram Reply to User 💬]
+
+    subgraph Add-ons
+        X1[Message History (Last 3 Q&A)]
+        X2[Source Snippets - PDF Traceability]
+        X3[/summarize Command - Smart Summarization]
+    end
+
+    F --> X2
+    G --> X1
+    H --> X3
+
 ```
 
 ## 🔮 Future Enhancements
 
 Planned upgrades and upcoming features for **MediChat Pro** include:
 
-- 🖼️ **OCR Integration:** Enable text extraction from image-based PDFs using Tesseract.  
-- 🧠 **Multi-format Support:** Allow users to upload and process `.docx`, `.xlsx`, and `.txt` files in addition to PDFs.  
-- 📊 **Structured Data Insights:** Automatically extract and summarize key medical metrics and trends from reports.  
+- 🖼️ **OCR Integration:** Enable text extraction from image-based PDFs using Tesseract.   
 - ☁️ **Cloud Vector Store:** Persist document embeddings securely for multi-session and multi-user access.  
-- 🗣️ **Voice-based Q&A:** Introduce voice interaction for asking questions through Telegram voice messages.  
-- 🤝 **Multi-user Context Management:** Support simultaneous sessions and maintain separate document contexts per user.  
+- 🗣️ **Voice-based Q&A:** Introduce voice interaction for asking questions through Telegram voice messages.   
 - 🔐 **Enhanced Privacy Mode:** Automatically delete processed files and vectors after session expiry.  
 - 📈 **Dashboard Extension (Web UI):** Develop a simple web interface to visualize summaries and extracted insights.  
-- 💬 **Message History Awareness:** Maintain the last 3 user interactions for improved contextual continuity.  
-- ⚡ **Caching:** Avoid re-embedding queries that have been processed before for faster responses.  
-- 📎 **Source Snippets:** Display which document or section contributed to each RAG-based answer.  
-- 🧾 **/summarize Command:** Summarize the last uploaded PDF or recent chat context directly within Telegram.
-
-
 
 ---
 
