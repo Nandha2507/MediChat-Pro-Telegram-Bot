@@ -155,7 +155,7 @@ Command	Description
 ## 🏗️ System Architecture
 
 ```mermaid
-
+graph TD
     A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
     B --> C[PDF Text Extraction (pdfminer.six)]
     C --> D[Text Chunking (LangChain Splitter)]
@@ -175,7 +175,6 @@ Command	Description
     F --> X2
     G --> X1
     H --> X3
-
 ```
 
 ## 🔮 Future Enhancements
