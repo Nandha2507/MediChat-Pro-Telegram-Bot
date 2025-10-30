@@ -186,24 +186,25 @@ It extracts, indexes, and understands complex reports — enabling you to ask qu
 
 ---
 
-## ⚙️ System Architecture
+## 🧩 System Architecture
 
 ```mermaid
-graph TD
-    A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
-    B --> C[PDF Text Extraction (pdfminer.six)]
-    C --> D[Text Chunking (LangChain Splitter)]
-    D --> E[Embeddings (HuggingFace - all-mpnet-base-v2)]
-    E --> F[FAISS Vector Store 🔍]
-    F --> G[Query Handling & Retrieval (LangChain RAG)]
-    G --> H[LLM (Llama-3.1-8b-instant via EURI API)]
-    H --> I[Answer Generation ✨]
-    I --> J[Telegram Reply to User 💬]
+flowchart TD
+    A[User uploads PDFs via Telegram] --> B[Telegram Bot Backend]
+    B --> C[PDF Text Extraction using pdfminer.six]
+    C --> D[Text Chunking using LangChain RecursiveCharacterTextSplitter]
+    D --> E[Vector Embedding with HuggingFace all-mpnet-base-v2]
+    E --> F[FAISS Vector Store]
+    F --> G[Relevant Chunk Retrieval]
+    G --> H[EURI AI Llama-3.1-8b-instant Model]
+    H --> I[Contextual Response Generation]
+    I --> J[Reply sent to User on Telegram]
 
-    subgraph Add-ons
-        X1[Message History (Last 3 Q&A)]
-        X2[Source Snippets - PDF Traceability]
-        X3[/summarize Command - Smart Summarization]
+    %% Feature Add-ons
+    subgraph Enhancements
+        X1[Message History Awareness (Last 3 interactions)]
+        X2[Source Snippet Display]
+        X3[Summarization Command (/summarize)]
     end
 
     F --> X2
