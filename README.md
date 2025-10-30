@@ -189,6 +189,7 @@ It extracts, indexes, and understands complex reports — enabling you to ask qu
 ## 🧩 System Architecture
 
 ```mermaid
+
 flowchart TD
     A[User uploads PDFs via Telegram] --> B[Telegram Bot Backend]
     B --> C[PDF Text Extraction using pdfminer.six]
@@ -210,7 +211,6 @@ flowchart TD
     F --> X2
     G --> X1
     H --> X3
-
 ```
 
 ## 🔮 Future Enhancements
