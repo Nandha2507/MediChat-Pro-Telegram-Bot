@@ -197,20 +197,18 @@ flowchart TD
     D --> E[Vector Embedding with HuggingFace all-mpnet-base-v2]
     E --> F[FAISS Vector Store]
     F --> G[Relevant Chunk Retrieval]
-    G --> H[EURI AI Llama-3.1-8b-instant Model]
+    G --> H[EURI AI Llama-3.1-8b-instruct Model]
     H --> I[Contextual Response Generation]
     I --> J[Reply sent to User on Telegram]
 
     %% Feature Add-ons
-    subgraph Enhancements
-        X1[Message History Awareness (Last 3 interactions)]
-        X2[Source Snippet Display]
-        X3[Summarization Command (/summarize)]
+    subgraph Feature_Addons
+        K[1️⃣ Multi-Document Processing]
+        L[2️⃣ Enhanced Context Memory (Last 3 interactions)]
+        M[3️⃣ Session History Awareness]
     end
 
-    F --> X2
-    G --> X1
-    H --> X3
+    J --> Feature_Addons
 ```
 
 ## 🔮 Future Enhancements
