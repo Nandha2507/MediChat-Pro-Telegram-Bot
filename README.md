@@ -154,7 +154,8 @@ Command	Description
 
 ## 🏗️ System Architecture
 
-```mermaid
+```
+mermaid
 
 graph TD
     A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
