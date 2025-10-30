@@ -154,9 +154,41 @@ Command	Description
 
 ## 🏗️ System Architecture
 
-```
-mermaid
+# 🩺 MediChat Bot — AI-Powered Medical PDF Chat Assistant 🤖
 
+MediChat Bot is an intelligent Telegram assistant that helps users interact with their **medical PDF reports** using natural language.  
+It extracts, indexes, and understands complex reports — enabling you to ask questions and get precise answers instantly.
+
+---
+
+## 🚀 Features
+
+✅ Upload **multiple medical PDFs** (lab reports, prescriptions, summaries).  
+✅ Automatically **processes documents** into searchable vector embeddings.  
+✅ **Chat with your reports** — ask questions, and get context-aware medical insights.  
+✅ **Message history awareness** — remembers your last 3 interactions for continuity.  
+✅ **Source snippets** — clearly displays which PDF file the answer was derived from.  
+✅ **/summarize command** — quickly summarizes your recent chat or uploaded medical documents.  
+✅ Built using **LangChain**, **FAISS**, and **Llama 3.1 (8B)** for blazing-fast retrieval and intelligent responses.
+
+---
+
+## 🧠 Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Language Model (LLM)** | `Llama-3.1-8b-instant` (via EURI API) |
+| **Embedding Model** | `sentence-transformers/all-mpnet-base-v2` |
+| **Vector Store** | FAISS |
+| **Frameworks** | LangChain, pdfminer.six, python-telegram-bot |
+| **Runtime** | Python 3.10+ |
+| **Environment** | `.env` for token and API key management |
+
+---
+
+## ⚙️ System Architecture
+
+```mermaid
 graph TD
     A[User Uploads PDF 📄] --> B[Telegram Bot 🤖]
     B --> C[PDF Text Extraction (pdfminer.six)]
@@ -177,6 +209,7 @@ graph TD
     F --> X2
     G --> X1
     H --> X3
+
 ```
 
 ## 🔮 Future Enhancements
